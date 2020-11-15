@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./cookie-clicker.js"></script>
+    <title>Cookie clicker</title>
+  </head>
+  <body>
+    <main class="game-container background">
+      <section class="left-panel">
+        <h2 class="left-panel__title">
+          Cookie counter: <span class="cookie-counter"></span>
+        </h2>
+        <div class="cookie-container">
+          <div id="cookie"></div>
+        </div>
+      </section>
+
+      <section class="center-panel">
+        <h2>Buildings</h2>
+        <div class="buildings">
+          <!-- 📝 Show this when at least 1 Cursor is bought -->
+          <!-- <div class="buildings__list buildings__list--cursors">
+            <div
+              class="buildings__list-item buildings__list-item--cursor"
+            ></div>
+          </div> -->
+          <!-- 📝 Show this when at least 1 Grandma is bought -->
+          <!-- <div>Grandmas</div> -->
+          <!-- 📝 Show this when at least 1 Farm is bought -->
+          <!-- <div>Farms</div> -->
+        </div>
+      </section>
+
+      <section class="right-panel">
+        <h2 class="right-panel__title">Store</h2>
+        <div>
+          <div>
+            <h3>Upgrades</h3>
+            <div class="upgrades">
+              <!-- 📝 Available when 10 cursors are bought -->
+              <!-- <div class="upgrades-item upgrade-item--cursor-lvl-1"></div>
+              <div class="upgrades-item upgrade-item--cursor-lvl-2"></div>
+              <div class="upgrades-item upgrade-item--cursor-lvl-3"></div> -->
+            </div>
+          </div>
+          <div class="store">
+            <h3>Buildings</h3>
+            <ul class="store__list">
+              <!-- 📝 Remove `unavailable` class and modifier when 10 cookies are bought -->
+              <li class="store__list-item unavailable">
+                <div class="store__icon store__icon--cursor-unavailable"></div>
+                <p class="store__building-name">Cursor</p>
+                <!-- 📝 Increase price with every new Cursor by 2 -->
+                <p class="store__price">##</p>
+              </li>
+              <!-- 📝 Add unavailable Grandma when Cursor is bought -->
+              <!-- 📝 Available when reached 50 cookies -->
+              <!-- <li>
+                <div>Icon - Grandma - Price</div>
+              </li> -->
+              <!-- 📝 Available when 100 cookies are reached -->
+              <!-- <li>
+                <div>Icon - Farm - Price</div>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
