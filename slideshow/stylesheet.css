@@ -1,0 +1,37 @@
+.second-slide, .third-slide, .second-slide-caption, .third-slide-caption {
+    display: none;
+} 
+
+.slide {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+}
+
+.caption, .btn {
+ position: absolute;
+}
+
+
+
+.btn {
+    font-size: 3em;
+    height: 10%;
+    top: 45%;
+}
+
+.prev{
+    left: 1%;
+
+}
+
+.next {
+right: 1%;
+
+}
+.caption {
+    font-size: 3em;
+    text-align: center;
+    width: 100%;
+}
+
