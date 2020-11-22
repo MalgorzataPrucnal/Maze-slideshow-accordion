@@ -24,3 +24,8 @@
 * cookie clicker
 * Dla chętnych
 * Dodanie elementów zasilanych JavaScriptem do strony profilowej na Github Pages
+
+
+## feature 1. Pokaz slajdów
+
+[Pokaz slajdów](slideshow/index.html)
