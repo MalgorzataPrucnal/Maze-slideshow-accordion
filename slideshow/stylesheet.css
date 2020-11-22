@@ -1,8 +1,8 @@
-.second-slide, .third-slide, .second-slide-caption, .third-slide-caption {
+.hide {
     display: none;
 } 
 
-.slide {
+.pic{
     position: relative;
     max-width: 100%;
     height: auto;
@@ -12,7 +12,9 @@
  position: absolute;
 }
 
-
+.caption {
+    bottom: 20px;
+}
 
 .btn {
     font-size: 3em;
