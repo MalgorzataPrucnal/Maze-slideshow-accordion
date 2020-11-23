@@ -1,26 +1,52 @@
-.hide {
+/* * {
+   
+  
+    
+}; */
+
+
+* {
+    font-family: 'Rock Salt', cursive;
+}
+
+
+.hide{
     display: none;
 } 
 
 .pic{
-    position: relative;
+    position: absolute;
     max-width: 100%;
     height: auto;
 }
 
-.caption, .btn {
- position: absolute;
-}
+/* 
+.slideshow-container {
+    position: relative;
+} */
 
-.caption {
+
+/* .caption {
     bottom: 20px;
+} */
+
+.caption, .btn {
+    position: absolute;
+   }
+
+main {
+    overflow: hidden;
 }
 
 .btn {
-    font-size: 3em;
-    height: 10%;
-    top: 45%;
+    position: absolute;
+    font-size: 7em;
+    color: white;
+    top: 20%;
+    background: rgba(0, 0, 0, 0);
+    border: none;
 }
+
 
 .prev{
     left: 1%;
@@ -32,8 +58,14 @@ right: 1%;
 
 }
 .caption {
-    font-size: 3em;
+    font-size: 7em;
     text-align: center;
-    width: 100%;
+    width: 60%;
+    text-align: left;
+    margin-left: 30px;
+    margin-top: 0px;
+    padding-top: 0px;;
+    /* top: 20px; */
+    color: white;
 }
 
