@@ -17,9 +17,9 @@ next.addEventListener("click", function forward() {
         slides[counter].style.display = "none"
         counter = counter + 1;
     }
-    else if (counter = max) {
+    else if (counter === max-1) {
         counter = 0;
-        hides[0].style.display = "block";
+        slides[0].style.display = "block";
         slides[max - 1].style.display = "none";
     }
 });

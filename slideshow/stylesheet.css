@@ -40,25 +40,23 @@ main {
 
 .btn {
     position: absolute;
-    font-size: 7em;
+    font-size: 100px;
     color: white;
-    top: 20%;
+    top: 25%;
     background: rgba(0, 0, 0, 0);
     border: none;
 }
 
-
 .prev{
     left: 1%;
-
 }
 
 .next {
 right: 1%;
-
 }
+
 .caption {
-    font-size: 7em;
+    font-size: 72px;
     text-align: center;
     width: 60%;
     text-align: left;
@@ -69,3 +67,12 @@ right: 1%;
     color: white;
 }
 
+@media (max-width: 700px) {
+    .caption {
+      font-size: 32px;
+    }
+    .btn {
+      font-size: 50px;
+      top: 10%;
+    }
+}
