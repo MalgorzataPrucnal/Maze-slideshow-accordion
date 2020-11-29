@@ -27,7 +27,6 @@ next.addEventListener("click", function forward() {
 
 prev.addEventListener("click", function backward() {
     if (counter > 0) {
-
         slides[counter - 1].style.display = "block";
         slides[counter].style.display = "none";
         counter = counter - 1;

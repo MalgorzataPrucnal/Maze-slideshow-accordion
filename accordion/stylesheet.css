@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+.information {
+    display: none;
+}
+
+.head, .show {
+    display: block;
+}
+
+p {
+    max-width: 50%;
+    background-color: #bedbbb;
+    padding: 10px;
+    margin-top: 0px;
+}
+
+.head {
+    max-width: 50%;
+    background-color: #8db596;
+    padding: 10px;
+    margin-bottom: 0px;
+}
