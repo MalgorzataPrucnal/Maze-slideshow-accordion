@@ -6,9 +6,9 @@
 
 ### Tematy do wyboru:
 #### Featury
-* Pokaz slajdów
+* [Pokaz slajdów](slideshow/index.html)
 * Kontener z zakładkami
-* Akordeon
+* [Akordeon](accordion/index.html)
 * Rozwijane drzewko folderów z plikami
 * Kalkulator
 * Notatnik
@@ -25,7 +25,3 @@
 * Dla chętnych
 * Dodanie elementów zasilanych JavaScriptem do strony profilowej na Github Pages
 
-
-## feature 1. Pokaz slajdów
-
-[Pokaz slajdów](slideshow/index.html)
