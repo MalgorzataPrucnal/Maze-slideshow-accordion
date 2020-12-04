@@ -6,7 +6,7 @@
 
 ### Tematy do wyboru:
 #### Featury
-* [Pokaz slajdów](slideshow/index.html)
+* [Pokaz slajdów](slideshow/index.html), [Pokaz slajdów wersja 2](slideshow-v.2/index.html)
 * Kontener z zakładkami
 * [Akordeon](accordion/index.html)
 * Rozwijane drzewko folderów z plikami
