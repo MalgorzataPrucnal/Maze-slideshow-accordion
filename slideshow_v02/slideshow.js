@@ -11,16 +11,19 @@ console.log(slides.length);
 
 let counter = 0;
 const size = slides[0].clientWidth;
-
+let last = slides[max+1];
+let first = slides[0];
 
 slideShow.style.transform = "translateX(" + (-size * counter) + "px)";
 
 next.addEventListener("click", () => {
     if(counter > max) return;
     slideShow.style.transition = "transform 0.4s ease-in-out";
+    
     counter ++;
     slideShow.style.transform = "translateX(" + (-size * counter) + "px)";
     console.log(counter);
+   
     
 })
 
