@@ -16,7 +16,7 @@
 * snake
 * łapanie spadających przedmiotów
 * omijanie przeszkód
-* labirynt
+* [labirynt](maze/index.html)
 * tic tac toe
 * memory
 * puzzle
