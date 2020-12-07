@@ -1,68 +1,53 @@
-let pawn = document.querySelector(".pawn");
-let step = 10;
-let positionX = 10;
-let positionY = 10;
+const pawn = document.querySelector(".pawn");
+const step = 10;
 
-window.addEventListener("keyup", (event)=>
+
+window.addEventListener("keydown", (event)=>
 {
+    const {style} = pawn;
+ switch(event.key){
 
-    if (event.key === "ArrowLeft"){
-        pawn.style.transform = `translateX(${positionX-step}px)`;
-        positionX = positionX - step;
-     
-    }
+    case "ArrowLeft": 
+    style.left = `${parseInt(style.left)-step}px`;
+    console.log(style.left);
+    break;
 
-    else if (event.key === "ArrowRight"){
-        pawn.style.transform = `translateX(${positionX+step}px)`;
-        
-        positionX = positionX + step;
-     
-    }
+    case "ArrowLeft": 
+    style.left = `${parseInt(style.left)+step}px`;
+    console.log(style.left);
+    break;
 
-    else if (event.key === "ArrowUp"){
-        positionX = positionX;
-        pawn.style.transform = `translateY(${positionY-step}px)`;
-        positionY = positionY - step;
-      
-    }
+        case "ArrowUp": 
+        style.top = `${parseInt(style.top)-step}px`;
+        break;
 
-    else if (event.key === "ArrowDown"){
-        // pawn.style.top = `${positionY+step}px)`;
-        pawn.style.transform = `translateY(${positionY+step}px)`;
-        positionY = positionY + step;
-         }
-
-
-    // switch(event.key){
-
-    
-    //     case "ArrowLeft": 
-    //     pawn.style.transform = `translateY(0)`;
+        case "ArrowDown": 
+        style.top = `${parseInt(style.top)+step}px`;
+        break;
+ }}
+)
+    // if (event.key === "ArrowLeft"){
     //     pawn.style.transform = `translateX(${positionX-step}px)`;
     //     positionX = positionX - step;
-        
-    //     break;
+     
+    // }
 
-    //     case "ArrowRight": 
+    // else if (event.key === "ArrowRight"){
     //     pawn.style.transform = `translateX(${positionX+step}px)`;
+        
     //     positionX = positionX + step;
-    //     console.log(event.key);
-    //     break;
+     
+    // }
 
-    //     case "ArrowUp": 
+    // else if (event.key === "ArrowUp"){
     //     positionX = positionX;
     //     pawn.style.transform = `translateY(${positionY-step}px)`;
     //     positionY = positionY - step;
-    //     console.log(positionX);
-    //     break;
-
-    //     case "ArrowDown": 
-        
-    //     pawn.style.transform = `translateY(${positionY+step}px)`;
-    //     positionY = positionY + step;
-    //     break;
-    
-    //     default: console.log("press the key")
+      
     // }
 
-})
+    // else if (event.key === "ArrowDown"){
+    //     // pawn.style.top = `${positionY+step}px)`;
+    //     pawn.style.transform = `translateY(${positionY+step}px)`;
+    //     positionY = positionY + step;
+    //      }
