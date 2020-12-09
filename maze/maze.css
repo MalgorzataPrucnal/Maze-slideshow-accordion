@@ -3,8 +3,7 @@
     width: 50px;
     border-radius: 50%;
     background-color: red;
- position: relative;
- top: 50px;
- left: 50px;
-
+ position: absolute;
+ top: 0;
+ left: 0;
 }
