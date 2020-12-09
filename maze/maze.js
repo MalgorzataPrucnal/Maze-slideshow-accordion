@@ -14,7 +14,6 @@ window.addEventListener("keyup", (event)=>
 
     else if (event.key === "ArrowRight"){
         pawn.style.transform = `translateX(${positionX+step}px)`;
-        
         positionX = positionX + step;
      
     }
