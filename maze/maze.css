@@ -1,16 +1,16 @@
- * {
+* {
     box-sizing: border-box;
      }
 
-.pawn {
+/* .pawn {
     height: 50px;
     width: 50px;
     border-radius: 50%;
     background-color: red;
- position: absolute;
- top: 0;
- left: 0;
-}
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
 /* td.wall {
     border: 1px solid black;
     width: 2px;
@@ -24,26 +24,32 @@ table {
   }
 
 td {
-            /* border: 1px solid black; */
-            width: 50px;
-            height: 50px;
-        }
-        .player {
-            background-color: red;
+    /* border: 1px solid black; */
+    width: 50px;
+    height: 50px;
+    }
+#player {
+    background-color: red;
+    border-radius: 50%;
 
+    }
+.extra {
+    background-color: yellow;
+}
+.wall {
+    background-color: black;
+}
+.prize {
+    background-color: green;
         }
-        .wall {
-            background-color: black;
-        }
-        .prize {
-            background-color: green;
-        }
+
 .game-container {
     display: flex;
     justify-content: center;
     gap: 50px;
+    margin-top: 50px;
 }
 
-p {
-    font-size: 50px;
+p, #time, .timer, .btn {
+    font-size: 30px;
 }
