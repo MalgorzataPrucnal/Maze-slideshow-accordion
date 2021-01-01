@@ -3,20 +3,20 @@ let points = 0;
 
 var board = [
     "11111111111111111",
-    "00000010010001000",
-    "11111001010101111",
-    "10001101000101010",
-    "10100000010100010",
-    "10111101010101011",
-    "10012001000101110",
-    "11011111011101000",
-    "11000001010001111",
-    "10012101110100000",
+    "78000010210301051",
+    "11111001010101001",
+    "10001101040101011",
+    "10105000010104001",
+    "10111151010101011",
+    "10012001000101101",
+    "11011111011101051",
+    "110000013105011116",
+    "1001210111010000007",
     "10111103010101111",
-    "10100001110000101",
-    "10101111012010101",
-    "10100001010111101",
-    "10001101012000001",
+    "10104001110000141",
+    "10101111012015101",
+    "10105001310111101",
+    "15001101012004001",
     "11111111111111111"
   ];
   
@@ -25,9 +25,8 @@ var board = [
     x: 0,
     y: 1,
   };
-  
-  const step = 1;
-  
+
+  const step = 1;  
   const maze = document.getElementById("maze");
   
   const table = document.createElement("table");
@@ -54,6 +53,15 @@ var board = [
         if (cell === "3") {
           td.classList.add("extra");
         }
+        if (cell === "4") {
+          td.classList.add("extra-two");
+        }
+        if (cell === "5") {
+          td.classList.add("extra-three");
+        }
+        if (cell === "6") {
+          td.classList.add("target");
+        }
         if (player.x === x && player.y === y) {
           td.id = "player";
         }
@@ -65,6 +73,8 @@ var board = [
     });
   };
   
+
+
   setInterval(() => update(), 16);
   
   window.addEventListener("keydown", (event) => {
@@ -78,9 +88,9 @@ var board = [
     } else if (event.key === "ArrowDown") {
       pos.y += step;
     }
-    if (board[pos.y][pos.x] === "1") {
+    if (board[pos.y][pos.x] === "7" || board[pos.y][pos.x] === "1") {
       return;
-    }
+    };
 
     if (board[pos.y][pos.x] === "2") {
       score.innerText = `${points + 10}`;
@@ -90,6 +100,56 @@ var board = [
       board.splice(pos.y, 1, newLine);
     }
 
+
+    if (board[pos.y][pos.x] === "3") {
+      score.innerText = `${points + 20}`;
+      points = points + 20;
+      let line = board[pos.y];
+      let newLine = line.replace(3, 0);
+      board.splice(pos.y, 1, newLine);
+    }
+
+    if (board[pos.y][pos.x] === "4") {
+      score.innerText = `${points + 30}`;
+      points = points + 30;
+      let line = board[pos.y];
+      let newLine = line.replace(4, 0);
+      board.splice(pos.y, 1, newLine);
+    }
+
+    if (board[pos.y][pos.x] === "5") {
+      score.innerText = `${points + 50}`;
+      points = points + 50;
+      let line = board[pos.y];
+      let newLine = line.replace(5, 0);
+      board.splice(pos.y, 1, newLine);
+    }
+
+    if (board[pos.y][pos.x] === "6") {
+      score.innerText = `${points + 50}`;
+     
+      return
+    }
+
+    if (board[pos.y][pos.x] === "8") {
+      
+    setInterval(() => {
+        if(counter < 0) {return};
+        counter--;
+        placeForTime.innerHTML = `00 : ${(counter).toString().padStart(2, "0")}`;
+        
+        console.log(counter);
+        if (counter === -1){alert("GAME OVER!");
+        placeForTime.innerHTML = `00 : 00`}
+      }, 1000);
+      
+  
+  
+      if (counter === 0){
+        clearInterval(counting);
+        EventTarget.removeEventListener()};
+      
+    }        
     player.x = pos.x;
     player.y = pos.y;
 
@@ -98,10 +158,7 @@ var board = [
 
   //STOPPER
  const placeForTime = document.querySelector(".place-for-time")
-
-  let counter = 20;
-
-
+ let counter = 20;
 
   document.querySelector("button").addEventListener("click", () => {
     let counting = setInterval(() => {
@@ -111,9 +168,14 @@ var board = [
       
       console.log(counter);
       if (counter === -1){alert("GAME OVER!!");
-      placeForTime.innerHTML = `00 : 00`}
-    }, 1000);
+      placeForTime.innerHTML = `00 : 00`;
+u    }}, 1000);
     
         });
 
-    if (counter === 0){clearInterval(counting); };
+    // if (counter === 0){clearInterval(counting);
+    
+    //   let ply = document.querySelector("#player");
+    //   ply.id = "player-done";
+    
+    // };
