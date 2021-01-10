@@ -11,7 +11,7 @@ var board = [
     "10012001000101101",
     "11011111011101051",
     "110000013105011116",
-    "1001210111010000007",
+    "1001210111010000097",
     "10111103010101111",
     "10104001110000141",
     "10101111012015101",
@@ -73,8 +73,6 @@ var board = [
     });
   };
   
-
-
   setInterval(() => update(), 16);
   
   window.addEventListener("keydown", (event) => {
@@ -125,6 +123,12 @@ var board = [
       board.splice(pos.y, 1, newLine);
     }
 
+    if (board[pos.y][pos.x] === "9"){
+      console.log("winner");
+      gameOver();
+      document.querySelector("h1").innerText = `Great! Your points: ${points}`
+    }
+
     if (board[pos.y][pos.x] === "6") {
       score.innerText = `${points + 50}`;
      
@@ -132,50 +136,45 @@ var board = [
     }
 
     if (board[pos.y][pos.x] === "8") {
-      
-    setInterval(() => {
-        if(counter < 0) {return};
+      const placeForTime = document.querySelector(".place-for-time")
+      let counter = 20;
+      let startCounting = setInterval(() => {
+        if (counter < 0) { return };
         counter--;
-        placeForTime.innerHTML = `00 : ${(counter).toString().padStart(2, "0")}`;
-        
+        placeForTime.innerHTML = `00:${(counter).toString().padStart(2, "0")}`;
+
         console.log(counter);
-        if (counter === -1){alert("GAME OVER!");
-        placeForTime.innerHTML = `00 : 00`}
+        if (counter === -1) {
+          gameOver();
+          placeForTime.innerHTML = `00:00`
+        }
       }, 1000);
-      
-  
-  
-      if (counter === 0){
-        clearInterval(counting);
-        EventTarget.removeEventListener()};
-      
-    }        
+
+
+      if (counter === 0) {
+        clearInterval(startCounting);
+        EventTarget.removeEventListener()
+      };
+
+    }
     player.x = pos.x;
     player.y = pos.y;
-
   });
-  
 
-  //STOPPER
- const placeForTime = document.querySelector(".place-for-time")
- let counter = 20;
+ //GAME OVER 
+let tryAgain = document.querySelector(".try-again");
+tryAgain.addEventListener("click", () => {
+  modal.classList.add('modal-hidden');
+  counter = 20;
+  player.x = 0;
+  player.y = 1;
+  location.reload();
 
-  document.querySelector("button").addEventListener("click", () => {
-    let counting = setInterval(() => {
-      if(counter < 0) {return};
-      counter--;
-      placeForTime.innerHTML = `00 : ${(counter).toString().padStart(2, "0")}`;
-      
-      console.log(counter);
-      if (counter === -1){alert("GAME OVER!!");
-      placeForTime.innerHTML = `00 : 00`;
-u    }}, 1000);
-    
-        });
+})
 
-    // if (counter === 0){clearInterval(counting);
-    
-    //   let ply = document.querySelector("#player");
-    //   ply.id = "player-done";
-    
-    // };
+
+let modal = document.querySelector('#modal');
+function gameOver() {
+  modal.classList.remove('modal-hidden');
+}
+

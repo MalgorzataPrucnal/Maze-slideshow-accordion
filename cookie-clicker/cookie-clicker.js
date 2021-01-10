@@ -25,6 +25,11 @@ function render() {
       "store__icon--cursor-unavailable",
       "store__icon--cursor"
     );
+      console.log(firstStoreListItem);
+  }
+};
+
+
     
     
     console.log(cursorBuilding);

@@ -2,35 +2,20 @@
     box-sizing: border-box;
      }
      
-/* body{
-    font-family: 'Roboto', sans-serif;
-} */
-/* .pawn {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background-color: red;
-    position: absolute;
-    top: 0;
-    left: 0;
-} */
-/* td.wall {
-    border: 1px solid black;
-    width: 2px;
-    height: 2px;
-} */
-
 table {
-    /* width: 100%; */
+    width: 100%;
     border-collapse: collapse;
+    display: table;
     /* border: 1px solid black; */
   }
 
 td {
     /* border: 1px solid black; */
+    display: table-cell;
     width: 55px;
     height: 55px;
     }
+    
 #player::after {
     font-size: 35px;
     content: "🕷"; 
@@ -73,11 +58,35 @@ td {
     margin-top: 50px;
 }
 
+.game-over {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	visibility: visible;
+}
 
-/* h2 {
-    font-size: 16px;
-} */
+.warning {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+    background-color: lightgrey;
+}
 
-/* button {
- font-size: 18px;
-} */
+.h1 {
+    font-size: 50px;
+    margin: 50px;
+
+}
+
+.modal-hidden {
+    display: none;
+}
