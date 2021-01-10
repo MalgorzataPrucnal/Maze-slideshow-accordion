@@ -126,7 +126,7 @@ var board = [
     if (board[pos.y][pos.x] === "9"){
       console.log("winner");
       gameOver();
-      document.querySelector("h1").innerText = `Great! Your points: ${points}`
+      document.querySelector("h1").innerText = `Great! Your score: ${points}`
     }
 
     if (board[pos.y][pos.x] === "6") {
@@ -164,11 +164,12 @@ var board = [
  //GAME OVER 
 let tryAgain = document.querySelector(".try-again");
 tryAgain.addEventListener("click", () => {
+  location.reload();
   modal.classList.add('modal-hidden');
   counter = 20;
   player.x = 0;
   player.y = 1;
-  location.reload();
+  
 
 })
 
