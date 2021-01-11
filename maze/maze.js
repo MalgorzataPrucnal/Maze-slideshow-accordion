@@ -165,10 +165,10 @@ var board = [
 let tryAgain = document.querySelector(".try-again");
 tryAgain.addEventListener("click", () => {
   location.reload();
-  modal.classList.add('modal-hidden');
-  counter = 20;
-  player.x = 0;
-  player.y = 1;
+  // modal.classList.add('modal-hidden');
+  // counter = 20;
+  // player.x = 0;
+  // player.y = 1;
   
 
 })
