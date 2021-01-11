@@ -12,17 +12,17 @@ table {
 td {
     /* border: 1px solid black; */
     display: table-cell;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     }
     
 #player::after {
-    font-size: 25px;
+    font-size: 23px;
     content: "🕷"; 
     }
 
 .extra::after {
-    font-size: 25px;
+    font-size: 23px;
     content: "🐜";
 }
 .wall {
@@ -30,28 +30,28 @@ td {
 }
 
 .insects {
-    font-size: 25px;
+    font-size: 23px;
 }
 
 .target::after {
     margin-top: 15px;;
-    font-size: 25px;
+    font-size: 23px;
     content: "🕸";
 }
 
 .extra-two::after {
-    font-size: 25px;
+    font-size: 23px;
     content: "🦗"
 }
 
 .extra-three::after {
-    font-size: 25px;
+    font-size: 23px;
     content: "🦟"
 }
 
 .prize::after {
     /* background-color: green; */
-    font-size: 25px;
+    font-size: 23px;
     content: "🐞";     
 }
 
@@ -59,7 +59,7 @@ td {
     display: flex;
     justify-content: center;
     gap: 50px;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .game-over {
