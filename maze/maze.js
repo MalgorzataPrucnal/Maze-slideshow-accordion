@@ -3,7 +3,7 @@ let points = 0;
 
 var board = [
     "11111111111111111",
-    "78000010210301051",
+    "08000010210301051",
     "11111001010101001",
     "10001101040101011",
     "10105000010104001",
@@ -77,7 +77,7 @@ var board = [
   
   window.addEventListener("keydown", (event) => {
     const pos = { ...player }
-    if (event.key === "ArrowLeft") {
+    if (event.key === "ArrowLeft" && player.x > 0) {
       pos.x -= step;
     } else if (event.key === "ArrowRight") {
       pos.x += step;
@@ -86,7 +86,7 @@ var board = [
     } else if (event.key === "ArrowDown") {
       pos.y += step;
     }
-    if (board[pos.y][pos.x] === "7" || board[pos.y][pos.x] === "1") {
+    if (board[pos.y][pos.x] === "7" || board[pos.y][pos.x] === "1" ) {
       return;
     };
 
@@ -126,7 +126,8 @@ var board = [
     if (board[pos.y][pos.x] === "9"){
       console.log("winner");
       gameOver();
-      document.querySelector("h1").innerText = `Great! Your score: ${points}`
+      document.querySelector("h1").innerText = `Great! Your score: ${points}`;
+      document.querySelector(".form-inline").classList.remove("hidden");
     }
 
     if (board[pos.y][pos.x] === "6") {
@@ -134,11 +135,18 @@ var board = [
      
       return
     }
+   
 
     if (board[pos.y][pos.x] === "8") {
+
+      let line = board[pos.y];
+      let newLine = line.replace(8, 0);
+      board.splice(pos.y, 1, newLine);
+      
       const placeForTime = document.querySelector(".place-for-time")
       let counter = 20;
       let startCounting = setInterval(() => {
+        
         if (counter < 0) { return };
         counter--;
         placeForTime.innerHTML = `00:${(counter).toString().padStart(2, "0")}`;
@@ -168,9 +176,7 @@ tryAgain.addEventListener("click", () => {
   // modal.classList.add('modal-hidden');
   // counter = 20;
   // player.x = 0;
-  // player.y = 1;
-  
-
+  // player.y = 1; 
 })
 
 
@@ -179,3 +185,38 @@ function gameOver() {
   modal.classList.remove('modal-hidden');
 }
 
+//Save in local storage
+const saveBtn = document.querySelector(".saveBtn");
+
+saveBtn.addEventListener("click", (e) => {
+  let pointsToSave = points;
+  e.preventDefault();
+  document.forms[0].classList.add("hidden");
+  
+      let keyName = document.forms[0].name.value;
+      // if(keyName == false || keyName == null) {keyName = "Anonymous"};
+      // keyNamesStorage.push(keyName);
+
+      window.localStorage.setItem(keyName, points);
+})
+
+//Show saved results
+let showResults = document.querySelector(".showResults");
+let placeForResults = document.querySelector(".placeForResults");
+
+showResults.addEventListener("click", () => {
+
+          placeForResults.innerHTML = '';
+          const list = document.createElement('ol');
+          let html = '';
+          for (var i = 0; i < localStorage.length; i++) {
+            let results = localStorage.key(i) + ": " + localStorage.getItem(localStorage.key(i));
+            html += `<li>${results}</li>`;
+          }
+  
+          list.innerHTML = html;
+          placeForResults.appendChild(list);
+  
+      });
+  
+  

@@ -14,11 +14,24 @@
 <div class="game-over modal-hidden" id="modal">
     <div class="warning">
         <h1>GAME OVER!</h1>
-        <div>
-            <button type="button" class="btn try-again btn-lg .bg-secondary.bg-gradient p-3 mb-2 bg-secondary text-white">Try
-                again!</button>
-        </div>
+
+        <button type="button"
+            class="btn try-again btn-lg .bg-secondary.bg-gradient p-3 mb-2 bg-secondary text-white">Try
+            again!</button>
+        <form class="form-inline hidden">
+
+            <div class="form-group  mx-sm-3 mb-2">
+                <label for="inputPassword2" class="sr-only">Name:</label>
+                <input type="text" class="form-control" name="name" id="inputPassword2">
+            </div>
+            <button type="submit" class="saveBtn btn btn-primary mb-2">Save result</button>
+
+        </form>
+
+        <button type="submit" class="showResults btn btn-warning mb-2">Show results</button>
+        <div class="placeForResults"></div>
     </div>
+</div>
 </div>
 
 

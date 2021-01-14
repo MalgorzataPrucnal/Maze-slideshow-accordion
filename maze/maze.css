@@ -74,6 +74,28 @@ td {
 	visibility: visible;
 }
 
+form {
+    display: flex;
+    flex-direction: row;
+ 
+    align-items: center;
+    justify-content: center;
+}
+
+.form-inline {
+    margin-top: 50px;
+}
+
+.form-group {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+
 .warning {
 	position: relative;
 	display: flex;
@@ -94,3 +116,11 @@ td {
 .modal-hidden {
     display: none;
 }
+
+.hidden {
+    display: none;
+}
+
+/* li {
+    list-style-type: none;
+} */
