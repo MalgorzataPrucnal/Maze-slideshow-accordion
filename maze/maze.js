@@ -76,16 +76,15 @@ var three = [
     "15001100512004001",
     "11111111111111111"
   ];
-  
-  let random = [one, two, three, four];
-  console.log(random);
-  
+
+let random = [one, two, three, four];
+
 var board = random[Math.floor((Math.random() * 4))];
 
-  const player = {
-    x: 0,
-    y: 1,
-  };
+const player = {
+  x: 0,
+  y: 1,
+};
 
   const step = 1;  
   const maze = document.getElementById("maze");
@@ -158,7 +157,6 @@ var board = random[Math.floor((Math.random() * 4))];
       let newLine = line.replace(2, 0);
       board.splice(pos.y, 1, newLine);
     }
-
 
     if (board[pos.y][pos.x] === "3") {
       score.innerText = `${points + 20}`;
@@ -234,34 +232,27 @@ var board = random[Math.floor((Math.random() * 4))];
 let tryAgain = document.querySelector(".try-again");
 tryAgain.addEventListener("click", () => {
   location.reload();
-  // modal.classList.add('modal-hidden');
-  // counter = 20;
-  // player.x = 0;
-  // player.y = 1; 
 })
-
 
 let modal = document.querySelector('#modal');
 function gameOver() {
   modal.classList.remove('modal-hidden');
 }
 
-//Save in local storage
+//SAVE IN LOCAL STORAGE
 const saveBtn = document.querySelector(".saveBtn");
 
 saveBtn.addEventListener("click", (e) => {
   let pointsToSave = points;
   e.preventDefault();
   document.forms[0].classList.add("hidden");
-  
-      let keyName = document.forms[0].name.value;
-      // if(keyName == false || keyName == null) {keyName = "Anonymous"};
-      // keyNamesStorage.push(keyName);
 
-      window.localStorage.setItem(keyName, points);
+  let keyName = document.forms[0].name.value;
+
+  window.localStorage.setItem(keyName, points);
 })
 
-//Show saved results
+//SHOW SAVED RESULTS
 let showResults = document.querySelector(".showResults");
 let placeForResults = document.querySelector(".placeForResults");
 
