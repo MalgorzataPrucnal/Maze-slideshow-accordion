@@ -242,6 +242,12 @@ function gameOver() {
 //SAVE IN LOCAL STORAGE
 const saveBtn = document.querySelector(".saveBtn");
 
+// [
+//   {name: nazwaWyniku, times: [wynik,wynik]},
+//   {name: nazwaWyniku, times: [wynik,wynik]}
+//   ]
+
+
 saveBtn.addEventListener("click", (e) => {
   let pointsToSave = points;
   e.preventDefault();
