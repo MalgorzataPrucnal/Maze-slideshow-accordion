@@ -10,7 +10,7 @@
 * Kontener z zakładkami
 * [Akordeon](accordion/index.html)
 * Rozwijane drzewko folderów z plikami
-* Kalkulator
+* [Kalkulator](calculator/index.html)
 * Notatnik
 #### Gry (motywy przewodnie - dopuszczalne hybrydy):
 * snake
