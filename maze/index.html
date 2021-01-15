@@ -28,7 +28,7 @@
 
         </form>
 
-        <button type="submit" class="showResults btn btn-dark mb-2">Show results</button>
+        <button type="submit" class="showResults btn btn-dark mb-2">Best results</button>
         <div class="placeForResults"></div>
     </div>
 </div>
@@ -38,10 +38,10 @@
 <div class="game-container">
     <div class="panel">
         <div class="timer p-3 mb-2 bg-danger text-white">
-            <h4>Time left: <span class="place-for-time">00:20</span></h4>
+            <p class="time">Time left: <span class="place-for-time">00:20</span></p>
         </div>
         <div class="p-3 mb-2 bg-success text-white">
-            <h4>Score: <span class="score">0</span></h4>
+            <p class="points">Score: <span class="score">0</span></p>
         </div>
         <div class="insects p-4 mb-12 bg-success text-white">
             <p>🐞: 10</p>
@@ -54,7 +54,10 @@
         </div>
 
     </div>
- 
+  
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script> -->
+    <script src="firebase.config.js"></script>
     <script src="maze.js"></script>
 </body>
 

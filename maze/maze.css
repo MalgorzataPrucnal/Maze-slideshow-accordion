@@ -29,8 +29,9 @@ td {
     background-color: black;
 }
 
-.insects {
-    font-size: 23px;
+.insects, .time, .points {
+    font-size: 22px;
+    margin: 0;
 }
 
 .target::after {
