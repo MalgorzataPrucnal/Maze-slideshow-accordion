@@ -6,5 +6,4 @@ Features prepared with the use of JavaScript, HTML and CSS during Junior Front-e
 Game prepared with the use of JavaScript, HTML, CSS and Firebase:
 * [The maze](maze/index.html)
 
-Live: [Maze-slideshow-accordion](https://malgorzataprucnal.github.io/Maze-slideshow-accordion/)
 
